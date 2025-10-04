@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const BASE_URL = 'https://pruebacalidadaaaaa-production.up.railway.app/';
+  const BASE_URL = 'http://localhost:8080';
 
   // Restaurar sesión al cargar la app
   useEffect(() => {
