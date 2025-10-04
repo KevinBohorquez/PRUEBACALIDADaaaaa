@@ -1,13 +1,16 @@
 import { useState } from "react";
 import "../styles/SeccionesPage.css"
 import SeccionCard from "../componentes/SeccionCard";
+import { useAuth } from "../context/AuthContext"; //mochar
 
 function SeccionesPage(){
+    const { user } = useAuth(); // mochar
     const [secciones, setSecciones] = useState([
         { id: 1, nombre: "CALIDAD DE SOFTWARE - G1" },
     ]);
     
     const handleAgregarSeccion = () => {
+        console.log(user);
         const nombre = prompt("Ingrese el nombre de la nueva sección:");
         if (nombre && nombre.trim() !== "") {
         const nuevaSeccion = {
