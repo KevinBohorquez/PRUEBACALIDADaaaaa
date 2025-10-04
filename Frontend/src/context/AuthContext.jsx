@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (credentials) => {
     try {
-      const response = await fetch(`${BASE_URL}/auth/login`, {
+      const response = await fetch(`${BASE_URL}/login`, {
         method: 'POST',
         mode: 'cors',
         headers: {
